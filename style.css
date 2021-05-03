@@ -1,0 +1,32 @@
+body{
+	margin: 0;
+	padding: 0;
+	background: #262626;
+}
+
+.toggle{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 240px;
+	height: 102px;
+	background: url(MenuImages/menu.png);
+	cursor: pointer;
+}
+
+.toggle:before{
+	content: url(MenuImages/close.png);
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 100%;
+	overflow: hidden;
+	transition: width 0.5s;
+}
+
+.toggle.active:before{
+	width: 100%;
+	transition: width 0.5s;
+}
